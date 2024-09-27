@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Grades Application</h2>
+        <form id="student-form">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter student name" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Enter subject name" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <input type="number" id="grade" placeholder="Enter grade" required>
+            </div>
+            <button type="button" class="btn" onclick="addStudent()">Add Student</button>
+        </form>
+
+        <h3>Students List</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                    <th>Average Score</th>
+                </tr>
+            </thead>
+            <tbody id="students-table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="assignment.js"></script>
+</body>
+</html>
